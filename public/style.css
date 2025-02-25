@@ -221,3 +221,45 @@ main {
 
     color: #333;
 }
+
+@media screen and (max-width: 750px) {
+
+    form div {
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    body {
+
+        padding: 0 1rem;
+    }
+
+    main {
+
+        flex-direction: column;
+    }
+
+     form input {
+
+        width: 100%;
+     }
+
+        #github_stats {
+    
+            flex-direction: column;
+            gap: 0rem;
+        }
+
+    #github_bio {
+
+        line-height: 1.5rem;
+    }
+
+    #github_social {
+
+        grid-template-columns: 1fr;
+    }
+
+}
