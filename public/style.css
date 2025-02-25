@@ -1,3 +1,223 @@
+:root {
+
+    --background: #141c2f;
+    --background-light: #1f2a48;
+    --buttons: #0079fe;
+    --border-radius: 0.5rem;
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: white;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.main_container {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#theme_switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+form {
+
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form i {
+
+    color: var(--buttons);
+    font-size: 1.2rem;
+}
+
+form input {
+
+    border: 0;
+    background-color: transparent;
+    width: 40rem;
+    color: inherit;
+    font-size: 1.2rem;
+}
+
+form input::placeholder {
+
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+form input:focus {
+
+    outline: none;
+}
+
+form button {
+
+    background-color: var(--buttons);
+    color: white;
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+form button:hover {
+
+    background-color: #0056b3;
+    transition: 0.3s;
+}
+
+/* MAIN INFO OF THE PROFILE */
+
+main {
+
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;  
+}
+
+.github_img_container img {
+
+    width: 10rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+#github_username {
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--buttons);
+    margin-top: -0.5rem;
+}
+
+#github_bio {
+
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #b3b3b3;
+}
+
+#github_stats {
+
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+
+}
+
+#github_stats div {
+
+   text-align: center;
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+
+#github_social {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#github_social a {
+
+    text-decoration: none;
+    color: white;
+}
+
+#github_social a:hover {
+
+    text-decoration: underline;
+}
+
+#github_profile_data code {
+
+    background-color: var(--background);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+/* LIGHT THEMED STYLES  */
+
+.light_theme {
+
+    --background: #f0f0f0;
+    --background-light: #ffffff;
+    --buttons: #0079fe;
+    --border-radius: 0.5rem;
+}
+
+.light_theme body {
+
+    background-color: var(--background);
+    color: black;
+}
+
+.light_theme form {
+
+    background-color: var(--background-light);
+}
+
+.light_theme form input::placeholder {
+
+    color: black;
+}
+
+.light_theme form button {
+
+    background-color: var(--buttons);
+    color: black;
+}
+
+.light_theme #github_bio {
+
+    color: #333;
+}
+
+.light_theme #github_social a {
+
+    color: black;
+}
+
+.light_theme #github_profile_data code {
+
+    color: #333;
 }

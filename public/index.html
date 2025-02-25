@@ -4,12 +4,96 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <p>Hello World!</p>
+    <div class="main_container">
+        <header>
+           <nav>
+            <h1>devfinder</h1>
+            <div id="theme_switch">
+                <p id="theme_status">DARK</p>
+                <i id="theme_ico" class="fas fa-moon"></i>
+            </div>
+           </nav> 
+         <form>
+           <div>
+            <i class="fas fa-search"></i>
+            <input type="text" id="user_search" placeholder="inserisci username GitHub.." required>
+           </div>
+            <button id="user_submit" type="submit">Cerca</button>
+         </form>
+        </header>
 
+        <!-- MAIN INFO OF THE PROFILE -->
+        <main>
+            <div class="github_img_container">
+                <img src="https://avatars.githubusercontent.com/u/88208912?v=4" alt="github_propic">
+            </div>
+            <div id="github_profile_data">
+               <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h2 id="github_name">Dennis Xhafaj</h2>
+                <code>Joined 30 Jul 2021</code>
+               </div>
+                <h5 id="github_username">@Xaxoman</h5>
+                <p id="github_bio">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur ad cum officia officiis iste 
+                    expedita aut soluta, nulla id eos ratione a, ipsum dignissimos architecto quia, ea optio aliquid in?
+                </p>
+                <!-- GITHUB PROFILE STATS  -->
+                <div id="github_stats">
+                   <div>
+                        <h4>Repos</h4>
+                        <p id="github_repo">11</p>
+                   </div>
+                    <div>
+                        <h4>Followers</h4>
+                        <p id="github_followers">9</p>
+                    </div>
+                    <div>
+                        <h4>Seguiti</h4>
+                        <p id="github_followed">10</p>
+                    </div>
+                </div>
+                <!-- SOCIAL MEDIA & MISC -->   
+                 <div id="github_social">
+                    <a href="" target="_blank"><i class="fas fa-map-marker-alt"></i> San Francisco</a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i> @Xaxoman</a>
+                    <a href="" target="_blank"><i class="fas fa-link"></i> https://www.github.blog</a>
+                    <a href="" target="_blank"><i class="fas fa-building"></i> @google</a>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- SCRIPT PER IL CLIENT  -->
+     <script>
+       
+       /* theme switcher  */
+        const theme_switcher = document.getElementById("theme_switch");
+        const theme_ico = document.getElementById("theme_ico");
+        const theme_status = document.getElementById("theme_status");
+
+        theme_switcher.addEventListener("click", () => {
+            
+            if (theme_status.textContent === "DARK") {
+                
+                theme_status.textContent = "LIGHT";
+                theme_ico.classList = "fas fa-sun";
+                document.documentElement.classList.add('light_theme');
+            } 
+            
+            else {
+                
+                theme_status.textContent = "DARK";
+                theme_ico.classList = "fas fa-moon";
+                document.documentElement.classList.remove('light_theme');
+            }
+        });
+
+     </script>
 
      <script src="../index.js"></script>
 </body>
