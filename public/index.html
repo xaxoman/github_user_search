@@ -30,12 +30,12 @@
         <!-- MAIN INFO OF THE PROFILE -->
         <main>
             <div class="github_img_container">
-                <img src="https://avatars.githubusercontent.com/u/88208912?v=4" alt="github_propic">
+                <img id="github_propic" src="https://avatars.githubusercontent.com/u/88208912?v=4" alt="github_propic">
             </div>
             <div id="github_profile_data">
                <div style="display: flex; align-items: center; justify-content: space-between;">
                 <h2 id="github_name">Dennis Xhafaj</h2>
-                <code>Joined 30 Jul 2021</code>
+                <code id="github_joined_date">Joined 30 Jul 2021</code>
                </div>
                 <h5 id="github_username">@Xaxoman</h5>
                 <p id="github_bio">
@@ -59,42 +59,17 @@
                 </div>
                 <!-- SOCIAL MEDIA & MISC -->   
                  <div id="github_social">
-                    <a href="" target="_blank"><i class="fas fa-map-marker-alt"></i> San Francisco</a>
-                    <a href="" target="_blank"><i class="fab fa-twitter"></i> @Xaxoman</a>
-                    <a href="" target="_blank"><i class="fas fa-link"></i> https://www.github.blog</a>
-                    <a href="" target="_blank"><i class="fas fa-building"></i> @google</a>
+                    <a href="" id="github_location" target="_blank"><i class="fas fa-map-marker-alt"></i> San Francisco</a>
+                    <a href="" id="github_twitter" target="_blank"><i class="fab fa-twitter"></i> @Xaxoman</a>
+                    <a href="" id="github_info_site" target="_blank"><i class="fas fa-link"></i> https://www.github.blog</a>
+                    <a href="" id="github_company" target="_blank"><i class="fas fa-building"></i> @google</a>
                  </div>
             </div>
         </main>
     </div>
 
     <!-- SCRIPT PER IL CLIENT  -->
-     <script>
-       
-       /* theme switcher  */
-        const theme_switcher = document.getElementById("theme_switch");
-        const theme_ico = document.getElementById("theme_ico");
-        const theme_status = document.getElementById("theme_status");
-
-        theme_switcher.addEventListener("click", () => {
-            
-            if (theme_status.textContent === "DARK") {
-                
-                theme_status.textContent = "LIGHT";
-                theme_ico.classList = "fas fa-sun";
-                document.documentElement.classList.add('light_theme');
-            } 
-            
-            else {
-                
-                theme_status.textContent = "DARK";
-                theme_ico.classList = "fas fa-moon";
-                document.documentElement.classList.remove('light_theme');
-            }
-        });
-
-     </script>
-
+    <script src="client.js"></script>
      <script src="../index.js"></script>
 </body>
 </html>
